@@ -1,4 +1,4 @@
-# ProgRES
+# ProgRES dataset
 
 We will upload the code in a few days.
 
