@@ -168,7 +168,7 @@ class ExecuterWrapperChild():
 
                 new_header = new_header + ntype + " f" + val + ", "
                 
-                new_code.append("  " + basic_type + " " + val + f" = f{val}.data();")
+                new_code.append("  " + basic_type + "*"*nlay + " " + val + f" = f{val}.data();")
                     
                 '''
                 if nlay == 1:
