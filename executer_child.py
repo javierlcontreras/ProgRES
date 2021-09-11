@@ -168,9 +168,9 @@ class ExecuterWrapperChild():
 
                 new_header = new_header + ntype + " f" + val + ", "
                 
-                new_code.append("  " + basic_type + "*"*nlay + " " + val + f" = f{val}.data();")
+                #new_code.append("  " + basic_type + "*"*nlay + " " + val + f" = f{val}.data();")
                     
-                '''
+                
                 if nlay == 1:
                     new_code.append("  " + basic_type + " " + val + f"[f{val}.size()];")
                     new_code.append(f"  for (int hfi=0; hfi<(int)f{val}.size(); hfi++) {val}[hfi] = f{val}[hfi];")
@@ -183,7 +183,7 @@ class ExecuterWrapperChild():
                     new_code.append(f"  for (int hfi=0; hfi<(int)f{val}.size(); hfi++)")
                     new_code.append(f"    for (int hfj=0; hfj<(int)f{val}[0].size(); hfj++)")
                     new_code.append(f"      for (int hfk=0; hfk<(int)f{val}[0].size(); hfk++) {val}[hfi][hfj][hfk] = f{val}[hfi][hfj][hfk];")
-                '''
+                
         new_code.append("  // end arrayization for input")
         new_code.append("")
         if len(new_code) == 3:
